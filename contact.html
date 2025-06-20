@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Nkhomotabo Amazing Mkhonta - Software Engineering Student">
+    <title>Contact Amazing | Nkhomotabo Amazing Mkhonta</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <h1 class="logo">Amazing</h1>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleMenu()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section contact-section animate-fadeInUp" role="region" aria-label="Contact Information">
+            <div class="container">
+                <h1 class="section-title">Contact Me</h1>
+                
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h2>Get in Touch</h2>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h3>Email</h3>
+                                    <p>n.mkhonta@alustudent.com</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <h3>Phone</h3>
+                                    <p>+250 794 903 690</p>
+                                    <p>+268 7669 2000</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h3>Location</h3>
+                                    <p>Bumbogo Sector, Gasabo District, Kigali</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form id="contactForm" class="contact-form" aria-label="Contact form">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required aria-required="true">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" required aria-required="true">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+
+                    <div class="success-message" id="successMessage" role="status" aria-live="polite">
+                        <i class="fas fa-check-circle"></i>
+                        Thank you! Your message has been sent successfully
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Nkhomotabo Amazing Mkhonta. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

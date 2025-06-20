@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projects by Nkhomotabo Amazing Mkhonta - Software Engineering Student">
+    <title>Projects | Amazing Mkhonta</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <h1 class="logo">Amazing</h1>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html" class="active" aria-current="page">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleMenu()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section projects-section animate-fadeInUp" role="region" aria-label="My Projects">
+            <div class="container">
+                <h1 class="section-title">My Projects</h1>
+                <div class="project-grid">
+                    <article class="project-card">
+                        <div class="project-header">
+                            <i class="fas fa-utensils"></i>
+                            <h2>ChopNow - Food Rescue Platform</h2>
+                        </div>
+                        <div class="project-content">
+                            <p>An innovative web platform that connects food vendors with customers to reduce food waste and provide affordable meals. Built with HTML, CSS, and JavaScript.</p>
+                            <div class="project-tags">
+                                <span class="tag">Web Development</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Food Waste</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-header">
+                            <i class="fas fa-code"></i>
+                            <h2>FizzBuzz</h2>
+                        </div>
+                        <div class="project-content">
+                            <p>A classic programming challenge that prints numbers from 1 to 100. For multiples of 3, it prints "Fizz"; for multiples of 5, it prints "Buzz"; and for multiples of both 3 and 5, it prints "FizzBuzz".</p>
+                            <div class="project-tags">
+                                <span class="tag">Algorithm</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Problem Solving</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-header">
+                            <i class="fas fa-shield-alt"></i>
+                            <h2>ATM Pin Verification System</h2>
+                        </div>
+                        <div class="project-content">
+                            <p>A basic ATM security project that validates a user's PIN code. Includes logic to track attempts and restricts access after 3 failed tries.</p>
+                            <div class="project-tags">
+                                <span class="tag">Security</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Authentication</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-header">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h2>Student Registration Form</h2>
+                        </div>
+                        <div class="project-content">
+                            <p>A form that collects student information like name, age, course, and email. Includes client-side validation with JavaScript to ensure all fields are correctly filled.</p>
+                            <div class="project-tags">
+                                <span class="tag">Form Validation</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">UI/UX</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Nkhomotabo Amazing Mkhonta. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

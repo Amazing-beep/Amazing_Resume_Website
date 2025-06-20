@@ -1,0 +1,436 @@
+:root {
+  --primary-pink: #ff69b4;
+  --secondary-pink: #d63384;
+  --light-pink: #fff0f5;
+  --pink-shadow: rgba(255, 105, 180, 0.1);
+  --white: #ffffff;
+  --text-dark: #333333;
+  --text-light: #666666;
+  --transition: all 0.3s ease;
+  --gradient-1: linear-gradient(135deg, #ff69b4, #d63384);
+  --gradient-2: linear-gradient(135deg, #fff0f5, #ffffff);
+  --gradient-3: linear-gradient(135deg, #d63384, #ff69b4);
+  --gradient-4: linear-gradient(45deg, #fff0f5, #ffffff);
+  --gradient-5: linear-gradient(135deg, #ff69b4, #ffffff);
+}
+
+/* ===== Global Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, var(--light-pink), var(--white));
+  color: var(--text-dark);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* ===== Custom Scrollbar ===== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--white);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-pink);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-pink);
+}
+
+/* ===== Header ===== */
+header {
+  background: rgba(255, 105, 180, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 10px var(--pink-shadow);
+}
+
+/* ===== Navigation ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: var(--white);
+  font-weight: 500;
+  transition: var(--transition);
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--white);
+  transition: var(--transition);
+}
+
+.nav-links li a:hover::after,
+.nav-links li a.active::after {
+  width: 100%;
+}
+
+/* ===== Hero Section ===== */
+main {
+  padding: 8rem 2rem 2rem;
+}
+
+.hero {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 4rem 0;
+  background: var(--gradient-2);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(255, 105, 180, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 105, 180, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.profile-pic {
+  max-width: 250px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 2rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+}
+
+.profile-pic:hover {
+  transform: translateY(-5px);
+}
+
+h1, h2 {
+  color: var(--secondary-pink);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+p {
+  color: var(--text-light);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: var(--gradient-1);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: var(--transition);
+  box-shadow: 0 4px 15px var(--pink-shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: 0.5s;
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--pink-shadow);
+}
+
+/* ===== Sections ===== */
+.section {
+  padding: 4rem 2rem;
+  background: var(--gradient-4);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px var(--pink-shadow);
+  margin: 2rem auto;
+  max-width: 1200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255, 105, 180, 0.05) 0%, transparent 50%, rgba(255, 105, 180, 0.05) 100%);
+  pointer-events: none;
+}
+
+.section-title {
+  color: var(--secondary-pink);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--gradient-1);
+  border-radius: 10px;
+}
+
+.section-title {
+  color: var(--secondary-pink);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--primary-pink);
+}
+
+/* ===== Project Cards ===== */
+.project {
+  background: var(--white);
+  border-radius: 15px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 5px 15px var(--pink-shadow);
+  transition: var(--transition);
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px var(--pink-shadow);
+}
+
+.project-title {
+  color: var(--secondary-pink);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* ===== Contact Form ===== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+input, textarea {
+  padding: 1rem;
+  border: 2px solid var(--light-pink);
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--primary-pink);
+  box-shadow: 0 0 0 3px rgba(255, 105, 180, 0.2);
+}
+
+/* ===== Footer ===== */
+footer {
+  background: rgba(255, 105, 180, 0.95);
+  backdrop-filter: blur(10px);
+  color: var(--white);
+  text-align: center;
+  padding: 2rem;
+  margin-top: 4rem;
+  box-shadow: 0 -2px 10px var(--pink-shadow);
+}
+
+/* ===== Animations ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.hero {
+  animation: float 3s ease-in-out infinite;
+}
+
+.profile-pic {
+  animation: float 4s ease-in-out infinite;
+}
+
+.project-card {
+  animation: shimmer 2s linear infinite;
+  background: linear-gradient(90deg, 
+    rgba(255, 105, 180, 0.05) 0%,
+    rgba(255, 105, 180, 0.1) 50%,
+    rgba(255, 105, 180, 0.05) 100%
+  );
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  header {
+    padding: 1rem;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    background: rgba(255, 105, 180, 0.95);
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1rem 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+  }
+
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--white);
+    transition: var(--transition);
+  }
+
+  .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+
+  .hero {
+    padding: 2rem 1rem;
+  }
+
+  .profile-pic {
+    max-width: 200px;
+  }
+
+  .section {
+    padding: 2rem 1rem;
+  }
+}
