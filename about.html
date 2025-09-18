@@ -3,131 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="About Nkhomotabo Amazing Mkhonta - Software Engineering Student">
-    <title>About Amazing | Nkhomotabo Amazing Mkhonta</title>
+    <title>About | Nkhomotabo Amazing Mkhonta</title>
+    <meta name="description" content="About Nkhomotabo Amazing Mkhonta – Software Engineer & Full-Stack Developer">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script defer src="script.js"></script>
 </head>
 <body>
-    <header>
-        <nav class="navbar" role="navigation" aria-label="main navigation">
-            <h1 class="logo">Amazing</h1>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar container" role="navigation" aria-label="main navigation">
+            <a href="index.html" class="logo">AM<span>.</span></a>
             <ul class="nav-links" id="navLinks">
-                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="index.html#home">Home</a></li>
                 <li><a href="about.html" class="active" aria-current="page">About</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="#" class="btn btn-primary">Download CV</a></li>
             </ul>
-            <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleMenu()">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
+            <div class="nav-toggle" aria-label="Toggle navigation" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
         </nav>
     </header>
 
     <main>
-        <section class="section about-section animate-fadeInUp" role="region" aria-label="About Me">
+        <!-- About Section -->
+        <section id="about" class="section skills" role="region" aria-label="About Me">
             <div class="container">
-                <h1 class="section-title">About Me</h1>
-                <div class="about-content">
-                    <img src="profile.jpg" alt="Nkhomotabo Amazing Mkhonta - Software Engineering Student" class="profile-pic">
-                    <div class="about-text">
-                        <p>Hello! I am Nkhomotabo Amazing Mkhonta, a passionate software engineering student who believes in the power of technology to transform lives. I love building solutions, empowering others, and expressing creativity through code, art, and music!</p>
-                        <p>My favorite colors are pink and white, which inspire my soft yet bold approach to life and design. When I'm not coding, I'm probably reading or planning the next youth empowerment project!</p>
-                        <div class="skills-grid">
-                            <div class="skill-card">
-                                <i class="fas fa-code"></i>
-                                <h3>Technical Skills</h3>
-                                <ul>
-                                    <li>JavaScript</li>
-                                    <li>Python</li>
-                                    <li>HTML/CSS</li>
-                                    <li>Git</li>
-                                    <li>Web Development</li>
-                                </ul>
-                            </div>
-                            <div class="skill-card">
-                                <i class="fas fa-brain"></i>
-                                <h3>Soft Skills</h3>
-                                <ul>
-                                    <li>Problem Solving</li>
-                                    <li>Teamwork</li>
-                                    <li>Communication</li>
-                                    <li>Creativity</li>
-                                </ul>
+                <h1 class="section-title">About <span>Me</span></h1>
+                <div class="hero .animate-fadeInUp" style="padding:0; background:none;">
+                    <div class="hero-content" style="max-width: 800px;">
+                        <p class="intro">Hello! I'm <strong>Nkhomotabo Amazing Mkhonta</strong>, a Software Engineer passionate about building impactful, user-centered products. I enjoy turning ideas into clean, scalable solutions and collaborating across teams to deliver delightful, accessible experiences.</p>
+                        <p>Beyond code, I champion creativity, youth empowerment, and lifelong learning. I love reading, mentoring, and experimenting with new technologies that solve real-world problems.</p>
+                        <div class="cta-buttons mt-2">
+                            <a href="projects.html" class="btn btn-secondary">Explore Projects</a>
+                            <a href="contact.html" class="btn btn-primary">Work With Me</a>
+                        </div>
+                        <div class="social-links mt-2">
+                            <a href="https://github.com/your-github-username" target="_blank" class="social-link" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/mkhonta-amazing-a49778340" target="_blank" class="social-link" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://twitter.com/your-twitter-username" target="_blank" class="social-link" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="profile.jpg" alt="Nkhomotabo Amazing Mkhonta" class="profile-pic">
+                        <div class="tech-stack">
+                            <span>Tech Stack</span>
+                            <div class="tech-icons">
+                                <i class="fab fa-html5" title="HTML5"></i>
+                                <i class="fab fa-css3-alt" title="CSS3"></i>
+                                <i class="fab fa-js" title="JavaScript"></i>
+                                <i class="fab fa-react" title="React"></i>
+                                <i class="fab fa-node-js" title="Node.js"></i>
+                                <i class="fas fa-database" title="Databases"></i>
                             </div>
                         </div>
+                    </div>
+                </div>
+
+                <!-- Skills Grid -->
+                <div class="skills-container mt-5">
+                    <div class="skill-category">
+                        <h3>Technical Skills</h3>
+                        <div class="skill" data-level="90">
+                            <span class="skill-name">HTML5 & CSS3</span>
+                            <div class="skill-bar"><div class="skill-progress"></div></div>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill" data-level="85">
+                            <span class="skill-name">JavaScript (ES6+)</span>
+                            <div class="skill-bar"><div class="skill-progress"></div></div>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill" data-level="75">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar"><div class="skill-progress"></div></div>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Professional Strengths</h3>
+                        <ul>
+                            <li>Problem Solving & Critical Thinking</li>
+                            <li>Collaboration & Communication</li>
+                            <li>Creativity & User Empathy</li>
+                            <li>Leadership & Mentorship</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Certifications & Learning</h3>
+                        <ul>
+                            <li>Include your most relevant certificates here</li>
+                            <li>Coursera / Udemy relevant tracks</li>
+                            <li>Hackathons or competitions</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Experience Section -->
         <section id="experience" class="section" role="region" aria-label="Work Experience">
             <div class="container">
-                <h2>Experience</h2>
-
-                <div class="experience-item">
-                    <h3>Student Ambassador – African Leadership University</h3>
-                    <p><em>2025 – Present</em></p>
-                    <p>Representing ALU in student engagement and outreach efforts. Supporting prospective students, leading campus tours, and contributing to university initiatives.</p>
+                <h2 class="section-title">Experience & <span>Impact</span></h2>
+                <div class="project-grid">
+                    <article class="project-card">
+                        <h3>Student Ambassador – African Leadership University</h3>
+                        <p><em>2025 – Present</em></p>
+                        <p>Represent ALU in student engagement and outreach initiatives. Lead campus tours and support prospective students.</p>
+                    </article>
+                    <article class="project-card">
+                        <h3>Educational Mentor – Community Youth Program</h3>
+                        <p><em>2023 – 2024</em></p>
+                        <p>Mentored youth in IT and academics, fostering confidence and purpose in underprivileged communities.</p>
+                    </article>
+                    <article class="project-card">
+                        <h3>Tutor – Freelance</h3>
+                        <p><em>2023 – 2024</em></p>
+                        <p>Delivered personalized tutoring in Math, English, and Computer Skills tailored to learning styles.</p>
+                    </article>
+                    <article class="project-card">
+                        <h3>Volunteer Consultant – 180 Degrees Consulting, ALU</h3>
+                        <p><em>2024 – Present</em></p>
+                        <p>Collaborated with a consulting team to deliver research-backed strategies for real clients.</p>
+                    </article>
+                    <article class="project-card">
+                        <h3>Event Host – Global Entrepreneurship Week, ALU</h3>
+                        <p><em>2024</em></p>
+                        <p>Hosted the Fun Lab event recognizing outstanding entrepreneurs and engaged large audiences.</p>
+                    </article>
+                    <article class="project-card">
+                        <h3>Hairstylist – Freelance</h3>
+                        <p><em>2022 – Present</em></p>
+                        <p>Managed client appointments and provided professional services with a focus on quality and reliability.</p>
+                    </article>
+                    <article class="project-card">
+                        <h3>Shopkeeper – Local Shop, Eswatini</h3>
+                        <p><em>2021 & 2023</em></p>
+                        <p>Handled operations, customer service, and inventory in a family-owned business.</p>
+                    </article>
+                    <article class="project-card">
+                        <h3>Tiller – Thandabantu Restaurant</h3>
+                        <p><em>2020</em></p>
+                        <p>Worked as a till operator providing customer service in a fast-paced environment.</p>
+                    </article>
                 </div>
+            </div>
+        </section>
 
-                <div class="experience-item">
-                    <h3>Educational Mentor – Community Youth Program</h3>
-                    <p><em>2023 –2024 </em></p>
-                    <p>Mentoring youth in IT and academic skills to prepare them for future careers. Fostering confidence, discipline, and purpose in underprivileged communities.</p>
-                </div>
-
-                <div class="experience-item">
-                    <h3>Tutor – Freelance</h3>
-                    <p><em>2023 – 2024</em></p>
-                    <p>Offering academic tutoring to high school students in subjects like Math, English, and Computer Skills. Tailoring sessions based on individual learning styles.</p>
-                </div>
-
-                <div class="experience-item">
-                    <h3>Volunteer Consultant – 180 Degrees Consulting, ALU</h3>
-                    <p><em>2024 – Present</em></p>
-                    <p>Worked with real clients to provide impactful business solutions. Collaborated in a consulting team, conducted research, and contributed to strategy development.</p>
-                </div>
-
-                <div class="experience-item">
-                    <h3>Event Host – Global Entrepreneurship Week, ALU</h3>
-                    <p><em>2024</em></p>
-                    <p>Hosted the Fun Lab event recognizing outstanding entrepreneurs. Led event coordination and audience engagement efforts.</p>
-                </div>
-
-                <div class="experience-item">
-                    <h3>Hairstylist – Freelance</h3>
-                    <p><em>2022 – Present</em></p>
-                    <p>Manage client appointments and provide professional hair styling services. Developed strong time management and client relations skills.</p>
-                </div>
-
-                <div class="experience-item">
-                    <h3>Shopkeeper – Local Shop, Eswatini</h3>
-                    <p><em>2021 & 2023</em></p>
-                    <p>Handled day-to-day operations, customer service, and stock management in a family-owned store.</p>
-                </div>
-
-                <div class="experience-item">
-                    <h3>Tiller – Thandabantu Restaurant</h3>
-                    <p><em>2020</em></p>
-                    <p>Worked as a till operator, handling payments and providing customer service in a fast-paced environment.</p>
+        <!-- CTA -->
+        <section class="cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Open to internships and junior roles</h2>
+                    <p>I'm eager to contribute, learn fast, and build great software with a supportive team.</p>
+                    <a href="contact.html" class="btn">Get in Touch</a>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2025 Nkhomotabo Amazing Mkhonta. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Nkhomotabo Amazing Mkhonta</h3>
+                    <p>Software Engineer & Full-Stack Developer creating digital experiences that matter.</p>
+                    <div class="footer-social">
+                        <a href="https://github.com/your-github-username" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/mkhonta-amazing-a49778340" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://twitter.com/your-twitter-username" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-envelope"></i> your.email@example.com</p>
+                    <p><i class="fas fa-phone"></i> +27 12 345 6789</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Johannesburg, South Africa</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2025</span> Nkhomotabo Amazing Mkhonta. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
+
+    <a href="#" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
