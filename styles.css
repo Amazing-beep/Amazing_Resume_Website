@@ -1038,3 +1038,10 @@ section {
 
 /* Also center social links rows under About */
 .social-links { display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; }
+
+/* Circular, larger profile picture override */
+.profile-pic {
+  width: clamp(220px, 32vw, 320px);
+  aspect-ratio: 1 / 1;       /* force perfect circle */
+  object-fit: cover;         /* crop to circle neatly */
+}
