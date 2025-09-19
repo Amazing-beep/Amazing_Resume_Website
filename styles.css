@@ -934,80 +934,78 @@ section {
 }
 #theme-toggle i { font-size: 1.4rem; }
 
-/* Dark Theme */
-html[data-theme='dark'] {
-  --primary-color: #60a5fa;
-  --secondary-color: #1d4ed8;
-  --accent-color: #93c5fd;
-  --text-dark: #e5e7eb;
-  --text-light: #cbd5e1;
-  --light-bg: #0f172a;
-  --white: #0b1220;
-  --black: #f9fafb;
-  --gray-100: #0b1220;
-  --gray-200: #0f172a;
-  --gray-300: #1f2937;
-  --gray-400: #9ca3af;
-  --gray-500: #6b7280;
+/* Light Pink Theme Overrides */
+:root {
+  --primary-color: #ec4899;   /* pink-500 */
+  --secondary-color: #f472b6; /* pink-400 */
+  --accent-color: #f9a8d4;    /* pink-300 */
+  --white: #ffffff;
+  --black: #0f172a;
+  --text-dark: #111827;       /* slate-900 */
+  --text-light: #374151;      /* slate-700 */
+  --light-bg: #ffffff;
+  --gray-100: #fff1f2;        /* rose-50 */
+  --gray-200: #ffe4e6;        /* rose-100 */
+  --gray-300: #fecdd3;        /* rose-200 */
+  --gray-400: #fda4af;        /* rose-300 */
 }
 
-html[data-theme='dark'] body {
-  background-color: var(--white);
+/* Buttons and links with pink theme */
+.btn,
+.btn-primary {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: #fff;
+}
+.btn:hover,
+.btn-primary:hover { filter: brightness(0.95); }
+
+.btn-secondary {
+  background: var(--gray-200);
   color: var(--text-dark);
-}
-
-html[data-theme='dark'] .header {
-  background-color: rgba(11, 18, 32, 0.9);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06);
-}
-
-html[data-theme='dark'] .logo { color: var(--black); }
-
-html[data-theme='dark'] .nav-links li a { color: var(--text-dark); }
-
-html[data-theme='dark'] .hero {
-  background: linear-gradient(135deg, #0b1220 0%, #0f172a 100%);
-}
-
-html[data-theme='dark'] .profile-pic {
-  border-color: rgba(255, 255, 255, 0.08);
-}
-
-html[data-theme='dark'] .social-link {
-  background-color: #0f172a;
-  color: var(--primary-color);
   border: 1px solid var(--gray-300);
 }
+.btn-secondary:hover { background: var(--gray-300); }
 
-html[data-theme='dark'] .skills { background-color: #0b1220; }
+/* Tag chips use soft pink backgrounds */
+.tag { background: var(--gray-100); border-color: var(--gray-300); }
 
-html[data-theme='dark'] .skill-category,
-html[data-theme='dark'] .project-card,
-html[data-theme='dark'] .footer {
-  background: #0f172a;
-  color: var(--text-dark);
+/* Links hover color */
+ a:hover { color: var(--primary-color); }
+
+/* Safe page padding and centered content */
+.container {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 2rem;
 }
 
-html[data-theme='dark'] .skill-bar { background-color: #1f2937; }
+/* Center the homepage hero content */
+.hero { text-align: center; }
+.hero .hero-content,
+.hero .container { display: grid; place-items: center; }
 
-html[data-theme='dark'] .section-title { color: var(--black); }
-
-html[data-theme='dark'] .cta { background: linear-gradient(135deg, #0b3b91, #1d4ed8); }
-
-html[data-theme='dark'] .footer { border-top: 1px solid rgba(255,255,255,0.08); }
-
-html[data-theme='dark'] .footer-about p,
-html[data-theme='dark'] .footer-links a,
-html[data-theme='dark'] .footer-contact p { color: var(--gray-400); }
-
-html[data-theme='dark'] .tag {
-  background: #0b1220;
-  border-color: #1f2937;
-  color: var(--text-dark);
+/* Avoid squashed edges on small screens */
+@media (max-width: 480px) {
+  .container { padding-inline: 1.6rem; }
 }
 
-html[data-theme='dark'] #theme-toggle {
-  background: #0f172a;
-  border-color: #1f2937;
-  color: var(--text-dark);
+/* Header & footer subtle pink accents */
+.header { background: rgba(255, 241, 242, 0.8); backdrop-filter: saturate(180%) blur(8px); }
+.footer { background: var(--gray-100); }
+.logo span { color: var(--primary-color); }
+
+/* Cards soften with white/pink */
+.project-card,
+.skill-category {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
 }
+
+/* Theme toggle adapts to light palette */
+#theme-toggle { border-color: var(--gray-300); background: var(--white); color: var(--text-dark); }
+#theme-toggle:hover { box-shadow: 0 4px 14px rgba(236, 72, 153, 0.15); }
+
+/* CTA uses a pink gradient */
+.cta { background: linear-gradient(135deg, #fbcfe8, #f472b6); color: #1f2937; }
+.cta .btn { background: #ec4899; border-color: #ec4899; color: #fff; }
