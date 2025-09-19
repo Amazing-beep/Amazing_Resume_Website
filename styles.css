@@ -1045,3 +1045,12 @@ section {
   aspect-ratio: 1 / 1;       /* force perfect circle */
   object-fit: cover;         /* crop to circle neatly */
 }
+
+/* Profile picture: larger circular frame override */
+.profile-pic {
+  width: clamp(240px, 34vw, 360px); /* a little bigger */
+  aspect-ratio: 1 / 1;              /* perfect circle */
+  border-radius: 50%;                /* ensure circle */
+  object-fit: cover;                 /* crop neatly */
+  border: 6px solid var(--gray-200); /* thicker soft-pink ring */
+}
