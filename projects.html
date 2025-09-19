@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Projects by Nkhomotabo Amazing Mkhonta - Software Engineering Student">
-    <title>Projects | Amazing Mkhonta</title>
+    <title>Projects | Nkhomotabo Amazing Mkhonta</title>
+    <meta name="description" content="Featured projects by Nkhomotabo Amazing Mkhonta – Software Engineer, Tech Content Creator & Full‑Stack Developer.">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script defer src="script.js"></script>
 </head>
 <body>
@@ -29,69 +29,191 @@
     </header>
 
     <main>
-        <section class="section projects-section animate-fadeInUp" role="region" aria-label="My Projects">
+        <section id="projects" class="section" role="region" aria-label="Projects">
             <div class="container">
-                <h1 class="section-title">My Projects</h1>
+                <h1 class="section-title">Featured <span>Projects</span></h1>
+
                 <div class="project-grid">
+                    <!-- Regex Data Extractor -->
+                    <article class="project-card">
+                        <div class="project-header">
+                            <i class="fas fa-filter"></i>
+                            <h2>Regex Data Extractor (Hackathon)</h2>
+                        </div>
+                        <div class="project-content">
+                            <p>Python script using Regular Expressions to extract structured data (emails, phone numbers, URLs) from unstructured text with a focus on accuracy and cleanup.</p>
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Regex</span>
+                                <span class="tag">Data Cleaning</span>
+                            </div>
+                            <div class="cta-buttons mt-2">
+                                <a href="https://github.com/Amazing-beep/alu-_regex-data-extraction-Amazing-beep" class="btn btn-primary" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Resume Analyzer (AI + NLP) -->
+                    <article class="project-card">
+                        <div class="project-header">
+                            <i class="fas fa-file-alt"></i>
+                            <h2>Resume Analyzer (AI + NLP)</h2>
+                        </div>
+                        <div class="project-content">
+                            <p>Compares resumes to job descriptions using NLP. Returns a match score, highlights missing skills, and provides improvement tips.</p>
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">NLP</span>
+                                <span class="tag">Web</span>
+                            </div>
+                            <div class="cta-buttons mt-2">
+                                <a href="https://github.com/Amazing-beep/AI_Resume_Analyser" class="btn btn-primary" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- OyaChop – Food Rescue Platform -->
                     <article class="project-card">
                         <div class="project-header">
                             <i class="fas fa-utensils"></i>
-                            <h2>ChopNow - Food Rescue Platform</h2>
+                            <h2>OyaChop – Food Rescue Platform</h2>
                         </div>
                         <div class="project-content">
-                            <p>An innovative web platform that connects food vendors with customers to reduce food waste and provide affordable meals. Built with HTML, CSS, and JavaScript.</p>
+                            <p>Connects food vendors with consumers to reduce food waste in African cities. Built with Stellar blockchain and pitched for the SCF SDF grant.</p>
                             <div class="project-tags">
-                                <span class="tag">Web Development</span>
-                                <span class="tag">JavaScript</span>
-                                <span class="tag">Food Waste</span>
+                                <span class="tag">Blockchain (Stellar)</span>
+                                <span class="tag">Web</span>
+                                <span class="tag">Impact</span>
+                            </div>
+                            <div class="cta-buttons mt-2">
+                                <a href="https://oya-chop-rescue-eats.lovable.app/" class="btn btn-secondary" target="_blank" rel="noopener">Live Demo</a>
                             </div>
                         </div>
                     </article>
 
+                    <!-- Responsive Resume Website -->
                     <article class="project-card">
                         <div class="project-header">
-                            <i class="fas fa-code"></i>
-                            <h2>FizzBuzz</h2>
+                            <i class="fas fa-id-card"></i>
+                            <h2>Responsive Resume Website</h2>
                         </div>
                         <div class="project-content">
-                            <p>A classic programming challenge that prints numbers from 1 to 100. For multiples of 3, it prints "Fizz"; for multiples of 5, it prints "Buzz"; and for multiples of both 3 and 5, it prints "FizzBuzz".</p>
+                            <p>Multi-page personal website with responsive UI, form validation, and smooth navigation.</p>
                             <div class="project-tags">
-                                <span class="tag">Algorithm</span>
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
                                 <span class="tag">JavaScript</span>
-                                <span class="tag">Problem Solving</span>
+                            </div>
+                            <div class="cta-buttons mt-2">
+                                <a href="https://amazing-beep.github.io/Amazing_Resume_Website/" class="btn btn-secondary" target="_blank" rel="noopener">View Live</a>
+                                <a href="https://github.com/Amazing-beep/Amazing_Resume_Website" class="btn btn-primary" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
                             </div>
                         </div>
                     </article>
 
+                    <!-- Mini JavaScript Projects -->
                     <article class="project-card">
                         <div class="project-header">
-                            <i class="fas fa-shield-alt"></i>
-                            <h2>ATM Pin Verification System</h2>
+                            <i class="fas fa-laptop-code"></i>
+                            <h2>Mini JavaScript Projects</h2>
                         </div>
                         <div class="project-content">
-                            <p>A basic ATM security project that validates a user's PIN code. Includes logic to track attempts and restricts access after 3 failed tries.</p>
+                            <ul>
+                                <li><strong>FizzBuzz:</strong> classic loops/logic challenge.</li>
+                                <li><strong>ATM PIN:</strong> verification with attempt tracking.</li>
+                                <li><strong>Student Registration:</strong> client-side validation.</li>
+                            </ul>
                             <div class="project-tags">
-                                <span class="tag">Security</span>
                                 <span class="tag">JavaScript</span>
-                                <span class="tag">Authentication</span>
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
                             </div>
                         </div>
                     </article>
 
+                    <!-- Alien Blaster Game -->
                     <article class="project-card">
                         <div class="project-header">
-                            <i class="fas fa-graduation-cap"></i>
-                            <h2>Student Registration Form</h2>
+                            <i class="fas fa-gamepad"></i>
+                            <h2>Alien Blaster Game</h2>
                         </div>
                         <div class="project-content">
-                            <p>A form that collects student information like name, age, course, and email. Includes client-side validation with JavaScript to ensure all fields are correctly filled.</p>
+                            <p>Browser game demonstrating a JavaScript game loop, event handling, and collision detection.</p>
                             <div class="project-tags">
-                                <span class="tag">Form Validation</span>
                                 <span class="tag">JavaScript</span>
-                                <span class="tag">UI/UX</span>
+                                <span class="tag">HTML5</span>
+                                <span class="tag">CSS</span>
+                            </div>
+                            <div class="cta-buttons mt-2">
+                                <a href="https://github.com/Amazing-beep/Alien-blaster-game" class="btn btn-primary" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
                             </div>
                         </div>
                     </article>
+
+                    <!-- Automated Digital Watch -->
+                    <article class="project-card">
+                        <div class="project-header">
+                            <i class="fas fa-clock"></i>
+                            <h2>Automated Digital Watch + Quotes</h2>
+                        </div>
+                        <div class="project-content">
+                            <p>Displays current time with rotating motivational quotes using smooth automated updates.</p>
+                            <div class="project-tags">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">DOM</span>
+                                <span class="tag">setInterval</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Submission Reminder App (Shell) -->
+                    <article class="project-card">
+                        <div class="project-header">
+                            <i class="fas fa-bell"></i>
+                            <h2>Submission Reminder App</h2>
+                        </div>
+                        <div class="project-content">
+                            <p>Shell script that checks assignment submissions and sends reminders to students who haven’t submitted.</p>
+                            <div class="project-tags">
+                                <span class="tag">Shell</span>
+                                <span class="tag">Automation</span>
+                                <span class="tag">Scripting</span>
+                            </div>
+                            <div class="cta-buttons mt-2">
+                                <a href="https://github.com/Amazing-beep/submission_reminder_app_Amazing-beep" class="btn btn-primary" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Pig Game -->
+                    <article class="project-card">
+                        <div class="project-header">
+                            <i class="fas fa-dice"></i>
+                            <h2>Pig Game</h2>
+                        </div>
+                        <div class="project-content">
+                            <p>Two‑player dice game built with JS. Roll to build current points, hold to bank, rolling 1 loses the turn. First to 100 wins.</p>
+                            <div class="project-tags">
+                                <span class="tag">HTML5</span>
+                                <span class="tag">CSS3</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Game Logic</span>
+                            </div>
+                            <div class="cta-buttons mt-2">
+                                <a href="https://github.com/Amazing-beep/Pig-Game" class="btn btn-primary" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Want a quick demo or code walkthrough?</h2>
+                    <p>I'd love to walk through implementation details, design choices, and trade‑offs for any project.</p>
+                    <a href="contact.html" class="btn">Get In Touch</a>
                 </div>
             </div>
         </section>
@@ -100,10 +222,10 @@
     <footer>
         <div class="footer-content">
             <p>&copy; 2025 Nkhomotabo Amazing Mkhonta. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <div class="footer-social">
+                <a href="https://github.com/Amazing-beep" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/mkhonta-amazing-a49778340" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://beacons.ai/amazing.tech" target="_blank" aria-label="Link Hub"><i class="fas fa-link"></i></a>
             </div>
         </div>
     </footer>
