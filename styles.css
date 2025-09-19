@@ -1009,3 +1009,32 @@ section {
 /* CTA uses a pink gradient */
 .cta { background: linear-gradient(135deg, #fbcfe8, #f472b6); color: #1f2937; }
 .cta .btn { background: #ec4899; border-color: #ec4899; color: #fff; }
+
+/* Home page profile picture: larger, centered, animated */
+.profile-pic {
+  display: block;
+  width: clamp(180px, 28vw, 260px);
+  height: auto;
+  margin: 0 auto 1.6rem;
+  border-radius: 50%;
+  border: 4px solid var(--gray-200);
+  box-shadow: 0 12px 30px rgba(236, 72, 153, 0.18);
+  animation: floatY 6s ease-in-out infinite;
+}
+.profile-pic:hover { transform: translateY(-4px) scale(1.02); }
+
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* Ensure hero section is nicely centered with breathing space */
+.hero { text-align: center; padding: 4rem 0; }
+.hero .hero-content { max-width: 900px; margin: 0 auto; }
+
+/* Center About Me text and CTA buttons */
+.intro { text-align: center; margin: 0 auto 1.6rem; max-width: 850px; }
+.cta-buttons { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+
+/* Also center social links rows under About */
+.social-links { display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; }
